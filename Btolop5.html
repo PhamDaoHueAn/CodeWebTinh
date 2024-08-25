@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang sản phẩm máy giặt</title>
+    <style>
+        .main-image {
+            text-align: center;
+        }
+
+        .thumbnail-images {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            transition: border-color 0.3s;
+        }
+
+        .thumbnail-images img {
+            width: 80px;
+            height: 80px;
+            margin-right: 5px;
+            
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: "•";
+            color: red;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body >
+
+    <div class="main-image">
+        <img id="mainImage" src="hinh1.jpg" alt="Máy giặt lớn" width="300px">
+    </div>
+
+    <div class="thumbnail-images">
+        <img src="hinh1.jpg" alt="Hình 1" onclick="changeImage('hinh1.jpg')">
+        <img src="hinh2.jpg" alt="Hình 2" onclick="changeImage('hinh2.jpg')">
+        <img src="hinh3.jpg" alt="Hình 3" onclick="changeImage('hinh3.jpg')">
+        <img src="hinh4.jpg" alt="Hình 4" onclick="changeImage('hinh4.jpg')">
+        <img src="may-giat-lg-fv1410s4m1-10-kg-inverter_1690799617.jpg" alt="Hình 5" onclick="changeImage('may-giat-lg-fv1410s4m1-10-kg-inverter_1690799617.jpg')">
+    </div>
+
+    <h2>Đặc điểm nổi bật</h2>
+
+    <ul>
+        <li>Công nghệ Inverter vận hành êm, bền và tiết kiệm điện</li>
+        <li><span class="highlight">Công nghệ Ultra Mix</span> giúp giữ quần áo bền màu như mới</li>
+        <li>Công nghệ Vapour Care diệt vi khuẩn và tác nhân gây dị ứng</li>
+        <li>Chương trình giặt Vapour Refresh làm mới, giảm nhăn quần áo</li>
+        <li>Công nghệ AutoSense giảm sờn rách, hao mòn, bảo vệ quần áo</li>
+        <li>Máy giặt có chương trình giặt an toàn cho trang phục len</li>
+    </ul>
+    <script>
+        function changeImage(imageSrc) {
+            document.getElementById('mainImage').src = imageSrc;
+        }
+    </script>
+</body>
+</html>
